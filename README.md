@@ -1,10 +1,8 @@
 # Labs 1–3
 
-This folder groups the three lab projects. Each lab remains independently runnable because Lab 1 uses Flutter, while Labs 2 and 3 use Dart command-line entrypoints.
+The Flutter app includes Labs 1–3 in one navigable app. Lab 2 and Lab 3 also retain their original Dart console entrypoints.
 
-The Lab 1 Flutter app opens a navigation menu. Lab 1 opens its Flutter demo; Lab 2 and Lab 3 open exercise overviews with their console run commands.
-
-## Lab 1 — Flutter
+## Run all labs in one Flutter app
 
 ```powershell
 cd Lab1
@@ -12,19 +10,21 @@ flutter pub get
 flutter run
 ```
 
-## Lab 2 — Dart
+The home screen opens Lab 1, Lab 2, or Lab 3. Lab 2 and Lab 3 have a tab for each exercise.
+
+## Original console entrypoints
+
+Lab 2:
 
 ```powershell
 cd Lab2
-dart pub get
 dart run bin/lab2.dart
 ```
 
-## Lab 3 — Dart
+Lab 3:
 
 ```powershell
 cd Lab3
-dart pub get
 dart run bin/lab3.dart
 ```
 

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'lab1_screen.dart';
-import 'lab_overview_screen.dart';
+import 'lab2_screen.dart';
+import 'lab3_screen.dart';
 
 class LabHomeScreen extends StatelessWidget {
   const LabHomeScreen({super.key});
 
   void _openLab(BuildContext context, Widget screen) {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(builder: (_) => screen),
-    );
+    Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => screen));
   }
 
   @override
@@ -24,39 +23,17 @@ class LabHomeScreen extends StatelessWidget {
       ),
       _LabItem(
         title: 'Lab 2',
-        subtitle: 'Dart fundamentals and OOP',
+        subtitle: 'Dart fundamentals, collections, OOP, and async',
         icon: Icons.code,
         color: Colors.indigo,
-        screen: const LabOverviewScreen(
-          title: 'Lab 2',
-          description: 'Dart fundamentals, collections, functions, OOP, and async programming.',
-          exercises: [
-            'Basic Syntax & Data Types',
-            'Collections & Operators',
-            'Control Flow & Functions',
-            'Intro to OOP',
-            'Async, Future, Null Safety & Streams',
-          ],
-          runCommand: 'cd Lab2\ndart run bin/lab2.dart',
-        ),
+        screen: const Lab2Screen(),
       ),
       _LabItem(
         title: 'Lab 3',
-        subtitle: 'Repositories, streams, and cache',
+        subtitle: 'Repositories, JSON, streams, and cache',
         icon: Icons.storage,
         color: Colors.teal,
-        screen: const LabOverviewScreen(
-          title: 'Lab 3',
-          description: 'Products, JSON users, async scheduling, stream transforms, and a settings cache.',
-          exercises: [
-            'Product Model & Repository',
-            'User Repository with JSON',
-            'Async + Microtask Debugging',
-            'Stream Transformation',
-            'Factory Constructors & Cache',
-          ],
-          runCommand: 'cd Lab3\ndart run bin/lab3.dart',
-        ),
+        screen: const Lab3Screen(),
       ),
     ];
 
@@ -67,9 +44,8 @@ class LabHomeScreen extends StatelessWidget {
         children: [
           Text(
             'Chọn lab',
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+            style: Theme.of(context).textTheme.headlineMedium
+                ?.copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
           Text(
